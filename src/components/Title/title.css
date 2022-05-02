@@ -1,0 +1,15 @@
+.title {
+    border-radius: 6px;
+    background-color: #f8f8f8;
+    padding: 8px 16px;
+    margin: 1em 0;
+}
+
+.title h3 {
+    display: flex;
+    align-items: center;
+}
+
+.title h3 svg {
+    margin-right: 6px;
+}

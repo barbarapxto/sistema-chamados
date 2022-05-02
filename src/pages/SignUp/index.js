@@ -1,15 +1,27 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import logo from '../../assets/img/logo.png';
+import { AuthContext } from '../../contexts/auth';
 
 export default function SignUp() {
-    const [nome, setNome] = useState('');
+    const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
+    const { signUp } = useContext(AuthContext);
+
     function handleSubmit(e) {
         e.preventDefault();
-        alert('teste');
+
+        if (email === '' || password === '' || name === '') {
+            toast.warning(
+                'Todos os campos são de preenchimento obrigatório para o cadastro.'
+            );
+            return;
+        }
+
+        signUp(name, email, password);
     }
     return (
         <div className='container-center'>
@@ -23,8 +35,8 @@ export default function SignUp() {
                     <input
                         type='text'
                         placeholder='Nome'
-                        value={nome}
-                        onChange={(e) => setNome(e.target.value)}
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
                     />
                     <input
                         type='text'

@@ -3,6 +3,24 @@
     --white: #fff;
     --blue: #3583f7;
     --blue-hover: #0f61dd;
+    --light-blue: #6fc2ff;
+    --orange: #ffb805;
+    --dark-orange: #e2a60d;
+    --green: #60bc23;
+    --dark-green: #4b9717;
+    --red: #ff3d32;
+    --dark-red: #cd2920;
+    --gray: #c9d2e1;
+    --dark-gray: #a3abb9;
+
+    --toastify-color-dark: #121212;
+    --toastify-color-light: var(--blue) !important;
+    --toastify-color-info: #6fc2ff !important;
+    --toastify-color-success: #60bc23 !important;
+    --toastify-color-warning: #ffb805 !important;
+    --toastify-color-error: #ff3d32 !important;
+
+    --toastify-text-color-light: #fff !important;
 }
 
 * {
