@@ -7,15 +7,15 @@ export default function RouteWrapper({
     isPrivate,
     ...rest
 }) {
-    const { signed, loading } = useContext(AuthContext);
+    const { signed } = useContext(AuthContext);
 
-    if (loading) {
-        return (
-            <div>
-                <h1>Carregando...</h1>
-            </div>
-        );
-    }
+    // if (loading) {
+    //     return (
+    //         <div>
+    //             <h2>Carregando...</h2>
+    //         </div>
+    //     );
+    // }
 
     if (!signed && isPrivate) {
         return <Redirect to='/' />;

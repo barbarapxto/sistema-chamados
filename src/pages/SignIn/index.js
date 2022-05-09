@@ -33,7 +33,7 @@ export default function SignIn() {
                     <img src={logo} alt='Logo da aplicação' />
                 </div>
 
-                <form onSubmit={handleSubmit}>
+                <form className='form-login' onSubmit={handleSubmit}>
                     <h1>Bem-vindo(a)</h1>
                     <input
                         type='email'

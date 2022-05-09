@@ -3,7 +3,7 @@ import { useContext, useEffect } from 'react';
 import { AuthContext } from '../../contexts/auth';
 import avatar from '../../assets/img/avatar.png';
 import { Link } from 'react-router-dom';
-import { FiHome, FiUsers, FiSettings, FiLogOut } from 'react-icons/fi';
+import { FiList, FiBriefcase, FiUser, FiLogOut } from 'react-icons/fi';
 
 export default function Header() {
     const { user, signOut } = useContext(AuthContext);
@@ -33,17 +33,17 @@ export default function Header() {
                 <nav className='sidebar-menu'>
                     <ul>
                         <Link to='/dashboard'>
-                            <FiHome />
+                            <FiList />
                             Chamados
                         </Link>
                         <Link to='/customers'>
-                            <FiUsers />
+                            <FiBriefcase />
                             Clientes
                         </Link>
                         <Link to='/profile'>
-                            <FiSettings /> Configurações
+                            <FiUser /> Meu perfil
                         </Link>
-                        <Link onClick={signOut}>
+                        <Link to='' onClick={signOut}>
                             <FiLogOut /> Sair
                         </Link>
                     </ul>

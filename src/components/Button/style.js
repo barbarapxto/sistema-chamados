@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Button = styled.a`
+export const Button = styled.button`
     border-radius: 4px;
     border: 0;
     font-size: 1.02rem;
@@ -10,9 +10,28 @@ export const Button = styled.a`
     transition: all 0.5s ease;
     cursor: pointer;
 
-    display: inline-block;
+    display: flex;
     justify-content: center;
     align-items: center;
+    gap: 6px;
+
+    ${(props) =>
+        props.load &&
+        `
+        svg{
+            animation: rotate linear 1s infinite;
+        }
+
+        @keyframes rotate{
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(-360deg);
+            }
+        }
+
+    `}
 
     ${(props) =>
         props.primary &&
@@ -64,6 +83,17 @@ export const Button = styled.a`
 
                     &:hover{
                         background-color: var(--dark-red);
+                    }
+                `};
+    ${(props) =>
+        props.redOutline &&
+        `
+                    border: 1px solid var(--red);
+                    color: var(--red);
+
+                    &:hover{
+                        background-color: var(--red);
+                        color: #fff;
                     }
                 `};
 `;

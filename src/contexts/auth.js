@@ -34,6 +34,7 @@ export default function AuthProvider({ children }) {
                     .doc(value.user.uid)
                     .set({
                         name: name,
+                        email: email,
                         avatarUrl: null,
                     })
                     .then(() => {
@@ -117,6 +118,8 @@ export default function AuthProvider({ children }) {
                 signUp,
                 signOut,
                 signIn,
+                setUser,
+                storageUser,
             }}
         >
             {children}

@@ -30,7 +30,7 @@ export default function SignUp() {
                     <img src={logo} alt='Logo da aplicação' />
                 </div>
 
-                <form onSubmit={handleSubmit}>
+                <form className='form-login' onSubmit={handleSubmit}>
                     <h1>Faça seu cadastro</h1>
                     <input
                         type='text'

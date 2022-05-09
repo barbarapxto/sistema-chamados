@@ -6,6 +6,6 @@ export const ContainerGrid = styled.div`
     gap: 0px 0px;
 
     @media screen and (max-width: 768px) {
-        grid-template-columns: 1fr;
+        grid-template-columns: 100%;
     }
 `;
